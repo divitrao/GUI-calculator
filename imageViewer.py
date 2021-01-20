@@ -24,11 +24,15 @@ def back(imageNumber):
 
     my_label.grid(row=0, column=0, columnspan=3)
 
-    # if imageNumber == 0:
-    #     button_backward = Button(root, text="<<", state=DISABLED)
+    if imageNumber == 1:
+        button_backward = Button(root, text="<<", state=DISABLED)
 
     button_forward.grid(row=1, column=2)
     button_backward.grid(row=1, column=0)
+
+    #status_bar updation
+    status = Label(root, text="image " + str(imageNumber) +" of " + str(len(my_image_list)), bd=1, relief=SUNKEN, anchor=E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W + E)
 
 
 def forward(imageNumber):
@@ -50,18 +54,23 @@ def forward(imageNumber):
     button_forward.grid(row=1, column=2)
     button_backward.grid(row=1, column=0)
 
+    # status_bar updation
+    status = Label(root, text="image " + str(imageNumber) +" of " + str(len(my_image_list)), bd=1, relief=SUNKEN, anchor=E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W + E)
+
 
 
 button_forward = Button(root,text=">>", command=lambda : forward(2))
 button_quit=Button(root,text="Exit",command=root.quit)
 button_backward = Button(root,text="<<", command=back)
 button_forward.grid(row=1,column=2)
-button_quit.grid(row=1,column=1)
+button_quit.grid(row=1,column=1,pady=10)
 button_backward.grid(row=1,column=0)
 
 my_label = Label(image=my_image1)
 
-
+status = Label(root,text="image 1 of " + str(len(my_image_list)) ,bd=1,relief=SUNKEN,anchor=E)
+status.grid(row=2,column=0,columnspan=3,sticky=W+E)
 
 my_label.grid(row=0,column=0,columnspan=3)
 
