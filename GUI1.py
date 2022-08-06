@@ -2,16 +2,16 @@ from  tkinter import *
 root = Tk()
 root.title('simple calculator')
 
-def myclick():
-    myLabel1 =  Label(root,text="hello "+ ent.get()) #.grid(row=0,column=0)
-    # myLabel2 =  Label(root,text="hello2") #.grid(row=1,column=1)
-    # myLabel3 =  Label(root,text="hello3") #.grid(row=2,column=2)
-    # myLabel1.grid(row=0,column=0)
-    # myLabel2.grid(row=1,column=1)
-    # myLabel3.grid(row=2,column=2)
-    myLabel1.pack()
-    # myLabel2.pack()
-    # myLabel3.pack()
+# def myclick():
+#     myLabel1 =  Label(root,text="hello "+ ent.get()) #.grid(row=0,column=0)
+#     # myLabel2 =  Label(root,text="hello2") #.grid(row=1,column=1)
+#     # myLabel3 =  Label(root,text="hello3") #.grid(row=2,column=2)
+#     # myLabel1.grid(row=0,column=0)
+#     # myLabel2.grid(row=1,column=1)
+#     # myLabel3.grid(row=2,column=2)
+#     myLabel1.pack()
+#     # myLabel2.pack()
+#     # myLabel3.pack()
 
 ent = Entry(root,width=35,borderwidth=5)
 ent.grid(row=0,column=0,columnspan=3,padx=50,pady=40)
@@ -38,6 +38,8 @@ def button_equal():
     ent.delete(0,END)
     if math=='addition':
         ent.insert(0,f_num + int(second_number))
+
+
 
     if math=='subtraction':
         ent.insert(0,f_num - int(second_number))

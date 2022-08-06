@@ -4,7 +4,7 @@ from PIL import ImageTk,Image
 root = Tk()
 
 root.title('image viewer')
-root.iconbitmap('images/marriage.jpg')
+root.iconbitmap('images/marriage.ico.jpg')
 
 my_image1 = ImageTk.PhotoImage(Image.open('images/marriage.jpg'))
 my_image2 = ImageTk.PhotoImage(Image.open('images/marriage2.jpg'))
